@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<html>
+    <head>
+        <title>lá cờ Việt Nam</title>
+
+    </head>
+
+
+    <style>
+       .flag {
+        position: absolute;
+        width: 525px;
+        height: 350px;
+        background-color: #da251d;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+       }
+       .star {
+        position: absolute;
+        background-color: #fdea02;
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        clip-path:polygon(50% 0%, 61% 35%,98% 35%, 68% 57%,79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%,39% 35%
+        )
+       }
+       .text{
+        position: absolute;
+        top: calc(50% + 200px); /* Đặt vị trí dưới lá cờ */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 30px;
+        color: #000;
+        font-family: Arial;
+
+
+       }
+
+    </style>
+    <body>
+    <div class="flag"></div>
+    <div class="star"></div>
+    <p class="text"> Tôi yêu Việt Nam</p>
+
+    </body>
+</html>

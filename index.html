@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Liên kết đến file CSS -->
+    <title>Lab1 - Quản lý sinh viên</title>
+</head>
+<body>
+
+    <!-- Menu với radio button -->
+    <nav>
+        <div class="tabs">
+            <input type="radio" id="tab-requirement" name="tab" checked>
+            <label for="tab-requirement">Requirement</label>
+
+            <input type="radio" id="tab-design" name="tab">
+            <label for="tab-design">Design</label>
+
+            <input type="radio" id="tab-implement" name="tab">
+            <label for="tab-implement">Implement</label>
+        </div>
+    </nav>
+
+    <!-- Nội dung các tab -->
+    <div class="content">
+        <section id="content-requirement" class="tab-content">
+            <h2>Yêu cầu</h2>
+            <p>
+                Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ như lớp môn học, giảng viên,... Sau đó thiết kế chức năng Quản lý đối tượng đó trên html bao gồm các tính năng thêm, sửa, xóa, tìm kiếm cho đối tượng đó. Ví dụ, làm chức năng Quản lý Sinh viên, bao gồm tính năng thêm, sửa, xóa, tìm kiếm.
+            </p>
+        </section>
+
+        <section id="content-design" class="tab-content">
+            <h2>Thiết kế</h2>
+            <p>Liên kết tới hình ảnh thiết kế và ảnh chụp giao diện:</p>
+            <a href="https://drive.google.com/file/d/1tbAKYW3b4dUYLLiu8UTqDLPKvZ5zIN-k/view" target="_blank">
+                <img src="https://drive.google.com/uc?id=1tbAKYW3b4dUYLLiu8UTqDLPKvZ5zIN-k" alt="Thiết kế trên giấy" width="200px">
+            </a><br>
+            <a href="http://127.0.0.1:5500/HCI/img.html" target="_blank">
+                <img src="http://127.0.0.1:5500/HCI/img.html" alt="Thiết kế trên HTML" width="200px">
+            </a>
+        </section>
+
+        <section id="content-implement" class="tab-content">
+            <h2>Triển khai</h2>
+            <p>Quản lý sinh viên là một chức năng quan trọng trong hệ thống. Bạn có thể truy cập trang quản lý sinh viên bằng cách nhấp vào liên kết dưới đây:</p>
+            <a href="http://127.0.0.1:5500/HCI/manage.html" class="link" target="_blank">Quản lý Sinh viên</a> <!-- Thêm liên kết đến trang manage.html -->
+        </section>
+    </div>
+
+    <script>
+        // Lắng nghe sự kiện khi tab thay đổi
+        const tabs = document.querySelectorAll('input[name="tab"]');
+        tabs.forEach(tab => {
+            tab.addEventListener('change', () => {
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.style.display = 'none'; // Ẩn tất cả nội dung
+                });
+                document.querySelector(`#content-${tab.id.split('-')[1]}`).style.display = 'block'; // Hiển thị nội dung tương ứng
+            });
+        });
+
+        // Hiển thị nội dung tab mặc định khi tải trang
+        document.querySelector(`#content-requirement`).style.display = 'block';
+    </script>
+
+</body>
+</html>

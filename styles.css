@@ -1,0 +1,71 @@
+/* Đặt nền cho trang */
+body {
+    background-color: #f4f4f4; /* Nền sáng */
+    font-family: 'Times New Roman', Times, serif; /* Thay đổi font cho đồng nhất */
+    margin: 0;
+    padding: 0;
+}
+
+/* Định dạng cho tiêu đề */
+h2 {
+    color: #007bff; /* Màu xanh cho tiêu đề */
+    font-size: 24px; /* Tăng kích thước chữ tiêu đề */
+}
+
+/* Định dạng cho menu (Lab1) và tabs */
+nav {
+    background-color: #1a3b5f; /* Màu xanh cho menu */
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Định dạng cho từng tab */
+nav label {
+    padding: 10px 20px;
+    background-color: #007bff; /* Màu nền của tab */
+    color: white; /* Màu chữ trắng cho tab */
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px; /* Tăng kích thước chữ cho các tab */
+}
+
+nav label:hover {
+    background-color: #0056b3; /* Màu nền khi di chuột qua */
+}
+
+/* Ẩn các input radio */
+input[type="radio"] {
+    display: none;
+}
+
+/* Định dạng cho phần nội dung bên dưới tabs */
+.content {
+    padding: 20px;
+    min-height: 300px;
+    background-color: #ffffff; /* Nền trắng cho nội dung */
+    border-radius: 5px;
+    margin: 20px;
+}
+
+/* Ẩn tất cả các section mặc định */
+.tab-content {
+    display: none;
+}
+
+/* Định dạng cho liên kết */
+.link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Màu xanh cho liên kết */
+    color: white; /* Màu chữ trắng cho liên kết */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px; /* Tăng kích thước chữ cho liên kết */
+}
+
+.link:hover {
+    background-color: #0056b3; /* Màu nền khi di chuột qua */
+}
